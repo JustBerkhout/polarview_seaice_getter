@@ -18,5 +18,5 @@ sed "s|$|.tif.tar.gz|g" $TEMP_DIR/basenames > $TEMP_DIR/tifs
 sed "s|$|.jpg|g" $TEMP_DIR/basenames > $TEMP_DIR/jpgs
 
 
-wget --base 'http://www.polarview.aq/images/104_S1geotiff/' -i $TEMP_DIR/tifs --directory-prefix=$DEST_DIR
-wget --base 'http://www.polarview.aq/images/106_S1jpgsmall/'$ACQ_MONTH'/' -i $TEMP_DIR/jpgs --directory-prefix=$DEST_DIR
+wget --timestamping --base 'http://www.polarview.aq/images/104_S1geotiff/' -i $TEMP_DIR/tifs --directory-prefix=$DEST_DIR
+wget --timestamping --base 'http://www.polarview.aq/images/106_S1jpgsmall/'$ACQ_MONTH'/' -i $TEMP_DIR/jpgs --directory-prefix=$DEST_DIR
