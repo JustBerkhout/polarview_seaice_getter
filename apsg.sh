@@ -17,6 +17,5 @@ wget "http://geos.polarview.aq/geoserver/polarview/ows?service=WFS&version=1.0.0
 sed "s|$|.tif.tar.gz|g" $TEMP_DIR/basenames > $TEMP_DIR/tifs
 sed "s|$|.jpg|g" $TEMP_DIR/basenames > $TEMP_DIR/jpgs
 
-
-wget --timestamping --base 'http://www.polarview.aq/images/104_S1geotiff/' -i $TEMP_DIR/tifs --directory-prefix=$DEST_DIR
 wget --timestamping --base 'http://www.polarview.aq/images/106_S1jpgsmall/'$ACQ_MONTH'/' -i $TEMP_DIR/jpgs --directory-prefix=$DEST_DIR
+wget --timestamping --base 'http://www.polarview.aq/images/104_S1geotiff/' -i $TEMP_DIR/tifs --directory-prefix=$DEST_DIR
