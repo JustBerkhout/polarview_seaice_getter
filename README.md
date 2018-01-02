@@ -9,3 +9,10 @@ This script helps download the polarview processed data `tar.gz` and `.jpg` prev
 
 The `date` argument must be formatted _YYYY-MM-DD_ and has to be a date in the (recent) past. 
 See http://www.polarview.aq/antarctic for more info 
+
+### Download destination
+
+The second positional commandline argument is the download destination. If omitted it defaults to the `downloads/` 
+subdirectory alongside the script location. E.g.
+
+```$./apsg.sh 2017-11-26 /my/designated/downloads/directory```
